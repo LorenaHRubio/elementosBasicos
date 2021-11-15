@@ -41,10 +41,65 @@ body{
 }
 
 header{
-    display: flex;
+    display:grid;
     height: 10vh;
     justify-content: start;
 }
+
+.menu-hamburguesa {
+    color: #fff;
+    float: right;
+    text-decoration: none;
+    display: block;
+    padding: 1em 1em;
+    border-bottom: 2px solid #456789;
+    max-width: 200px;
+    background: hsl(125, 86%, 40%);
+    font-variant: small-caps;
+    text-shadow: 1px 1px black;
+  }
+  .menu-hamburguesa input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .menu-hamburguesa .fa-bars, .respmenu .fa-times {
+    font-size: 48px;
+    pointer-events: none;
+  }
+  
+  .menu-hamburguesa input[type="checkbox"] {
+    opacity: 0;
+  }
+  
+  .menu-hamburguesa {
+    color: white;
+    position: relative;
+    background: #123456;
+    min-height: 48px;
+  }
+  
+  .menu-hamburguesa nav {
+    display: none;
+  }
+  
+  .menu-hamburguesa input:checked ~ nav {
+    display: block;
+  }
+  
+  .menu-hamburguesa input:checked ~ .fa-bars {
+    display: none;
+  }
+  
+  .menu-hamburguesa input:not(:checked) ~ .fa-times {
+    display: none;
+  }
 
 main{
     margin: 1em 0;
@@ -121,11 +176,11 @@ a:focus, a:hover { /*hover cuando tienes el ratón encima del elemento, focus da
     outline-offset: 0;
     text-decoration: none;
 }/*en este caso el enlace esta dentro de una p entonces tendrias que 
-
+*/
 p:focus, p:hover
 {
-    color: red; por ejemplo, que se ponga en rojo cuando pasa por encima 
-}*/
+    color: hsl(0, 100%, 50%); /*por ejemplo, que se ponga en rojo cuando pasa por encima */
+}
 
 /*====================
 ========Image=========
@@ -448,6 +503,7 @@ img {
         font-size: 1.5em;
     }
 }
+
 
 
 

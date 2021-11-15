@@ -1,32 +1,55 @@
 <!doctype html>
 <html lang="es">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="https://www.youtube.com/s/desktop/12d6b690/img/favicon.ico">
+        <!--
+            las etiquetas pueden tener atributos. lang es un atributo.
+            <head> es una etiqueta que no lo verá el usuario 
+            <meta> darán información a los buscadores y navegadores sobre información revelante sobre la página
+        -->
+        <meta charset="utf-8"><!--define codificación de carácteres que usará la web(carácteres latinos)-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"><!--es la que va a permitir que nuestro diseño sea responsive ¡¡MUY IMPORTANTE!!-->
 
-		<title>Título</title>
-		<meta name="description" content="descripción de la web, se recomienda 90 caracteres">
+        <!--El icono que sale en la pestaña. normalmente tendía que tener 30x30px o 16x16px
+            shortcut me permite añadir un icono(favicon) que aparecerá en la pestaña de la web, en el atributo href podemos añadir tanto un enlace a un lugar de internet que tenga una imagen
+            o indicar en que carpeta de nuestro ordenador(servidor) se encuntra esa imagen
+        -->
+        <link rel="shortcut icon" href="images/favicon_nuevo.jpg">
+        
+        <!--aparecerá tanto en la búsqueda de google como en la pestaña. 65 carácteres máximo. Palabra clave tendría que aparecer en el título-->
+        <title>Cambio de Nombre Porque Sí</title>
+
+        <!--se describe la página. Sale en google lo que pones en el atributo content. Poner las palabras clave para que haya más probabilidades de quete encuentre la gente
+        Lo ideal que cada página tenga diferente descripción. Luego explicará cómo se puede hacer. Por ahora solo una descripción global.
+        descripción de la web, se recomienda 90 caracteres
+        -->
+		<meta name="description" content="Aquí hacemos cosas de clase y aprendemos cosas de HTM, CSS y JS. El máximo son 90 clave">
+        
+        <!--¡¡MUY IMPORTANTE!! ya no sirve para posicionar. Ahora google se basa en la descripción y el título de la web-->
         <meta name="keywords" 	 content="palabras clave, separadas, por comas">
 
+
 		<!-- 
-        <meta property="fb:app_id"        content="" /> 
-		<meta property="og:url"           content="" />
+            Esto es por si quieres conectar con facebook.
+
+        <meta property="fb:app_id"        content="añadiremos el número identificador que nos dará facebook" /> 
+		<meta property="og:url"           content="www.loquesea.com" />
 		<meta property="og:type"          content="website" />
-		<meta property="og:title"         content=""/>
-		<meta property="og:description"   content="" /> 
+		<meta property="og:title"         content="Título"/>
+		<meta property="og:description"   content="Descripción de nuestra web" /> 
         -->
 
+        <!-- carga de los archivos css, en el atributo href le decimos la ubicación en una carpeta de nuestro servidor. Más adelante sabremos como cargar el archivo css donde estará todo, porque contra menos archivos tengas que cargar
+        mejor será el rendimiento-->
         <link href="style/normalize.css" rel="stylesheet">
         <link href="style/main.css" rel="stylesheet">
     </head>
     
-    <body>
+    <body><!--todo lo que va después de esto, es lo que ve el usuario-->
         <header>
             <div class="header-element logo">
-                <svg viewbox="0 0 24 24">
-                    <path d="M18.36,2.64C20,2.64 21.36,4 21.36,5.64C21.36,7.29 20,8.64 18.36,8.64C16.71,8.64 15.36,7.29 15.36,5.64C15.36,5.34 15.41,5.06 15.5,4.8C14.43,4.29 13.25,4 12,4A8,8 0 0,0 4,12L4.04,12.84L2.05,13.05L2,12A10,10 0 0,1 12,2C13.69,2 15.28,2.42 16.67,3.16C17.16,2.83 17.74,2.64 18.36,2.64M18.36,4.64A1,1 0 0,0 17.36,5.64A1,1 0 0,0 18.36,6.64C18.92,6.64 19.36,6.19 19.36,5.64C19.36,5.08 18.92,4.64 18.36,4.64M5.64,15.36C7.29,15.36 8.64,16.71 8.64,18.36C8.64,18.66 8.59,18.94 8.5,19.2C9.57,19.71 10.75,20 12,20A8,8 0 0,0 20,12L19.96,11.16L21.95,10.95L22,12A10,10 0 0,1 12,22C10.31,22 8.72,21.58 7.33,20.84C6.84,21.17 6.26,21.36 5.64,21.36C4,21.36 2.64,20 2.64,18.36C2.64,16.71 4,15.36 5.64,15.36M5.64,17.36C5.08,17.36 4.64,17.81 4.64,18.36C4.64,18.92 5.08,19.36 5.64,19.36A1,1 0 0,0 6.64,18.36A1,1 0 0,0 5.64,17.36M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z" />
-                </svg>
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M11,17H13V19H11V17M14,17H16V19H14V17M9,4H11V15A4,4 0 0,1 7,19H5A3,3 0 0,1 2,16V12H4V16A1,1 0 0,0 5,17H7C8.11,17 9,16.11 9,15V4M12,4H14V13H17V8H19V13C19,14.11 18.11,15 17,15H14C12.89,15 12,14.11 12,13V4M20,10H22V17A3,3 0 0,1 19,20H17V18H19A1,1 0 0,0 20,17V10Z" />
+                </svg><!--la imagen es un vector-->
             </div>
 
             <div class="header-element title">
@@ -40,8 +63,8 @@
             </div>
 
             <div class="main-element crud">
-                <div class="crud__table">
-                    <div class="crud__table-grid">
+                <div class="crud__table"><!--la __ son dos barra bajas se utilizan para decir que dentro de crud hay una table-->
+                    <div class="crud__table-grid"><!--luego utilizamos - para decir que en la table hay grid-->
                         <div class="crud__table-grid-element">
                             <img src="images/1.jpg" alt="ardillas">
                         </div>
@@ -99,6 +122,16 @@
                         </div>
 
                         <div class="crud__form-element">
+                            <div class="crud__form-label">
+                                <label for="lastname">Apellidos</label>
+                            </div>
+
+                            <div class="crud__form-input">
+                                <input type="text" name="lastname">
+                            </div>
+                        </div>
+
+                        <div class="crud__form-element">
                             <button class="crud__store-button">Guardar</button>
                         </div>
                     </form>
@@ -114,18 +147,21 @@
                 <a href="https://thispersondoesnotexist.com/"><p>enlace a una web de verdad</p></a>
             </div>
         </footer>
-            
+        
+        <!--carga de los archivos de js, en el atributo src vamos a señalar la ubicación en una carpeta del servidor.
+        Se pone aquí abajo para que el ordenador pueda compilar todo lo de arriba para que el usuario pueda ver cosas, porque sino se quedaría esperando a que cargara el js. El js es lo último
+    Más addelante aprendemos a cargar el js en diferido-->
         <script src="js/main.js"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
         <script>
             WebFont.load({
                 google: {
-                    families: ['Ubuntu:700,700i', 'Ubuntu+Condensed:400']
+                    families: ['Ubuntu:700,700i', 'Ubuntu+Condensed:400', 'Praise', 'Petemoss' ]
                 }
             });        
         </script>
-
+    <!--aquí estamos cargando el archivo javaScript, y al haberlo cargado permite cargar la fuente tipográfica -->
         <!-- 
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

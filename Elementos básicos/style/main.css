@@ -3,12 +3,41 @@
 ======================*/
 
 body{
-    background-color: hsl(226 63% 45%);
+    background-color: hsl(226, 63%, 45%);/*Poner las comas para que te salga el color para elegir*/
+    /*estudiar esto animation-duration: 15s;*/
     display:flex; 
     flex-direction:column;    
-    margin: 1em auto;
+    margin: 1em auto;/*utilizamos el margin para que la caja esté centrada, sino ponemos esto*/
     min-height: 100vh;
-    width: 90%;
+    width: 90%;/*Esto no serviría para dar margen por los dos lados, se daría margen por el lador derecho, pero no en el izquierdo*/
+
+    /*margin-top: ;
+    margin-bottom: 
+    margin-left: ;
+    margin-right: ;
+    
+    margin: top 1em right 2em bottom 3em left 2em ;
+    pero se escribe en el sentido de las agujas del reloj
+
+
+    margin: 1em 2em 3em 2em ;
+    margin con dos valores(margin: 1em 0;) es arriba y abajo y derecha e izquierda
+
+    auto va a repartir lo que sobre y lo reparte entre la izquierda y la derecha
+    
+    Todo esto sirve también para padding
+
+    border: 0.5em solid #fff ;
+    
+    #fff es blanco
+    
+    border-bottom: 0.5em solid #fff; para solo borde de abajo
+    tenemos solid
+    dahed
+    dotted
+    y muchos más que podemos encontrar en w3schools y demás páginas por el mundo
+    */
+    
 }
 
 header{
@@ -41,10 +70,16 @@ footer{
 
 h1, h2, h3, h4, h5, h6, a, p{
     color: hsl(0, 0%, 100%);
+    /*Toda la tipografía de la web será blanca*/
 }
 
 h1, h2, h3, h4 {
-    font-family: "Ubuntu";
+    font-family: "Praise";
+    /*para poner tipografias diferentes, fuentes que no tienes que descargar en el ordenador, sino que directamente de fonts, buscamos la fuente
+    que queremos y nos daran el link y lo copiamos en el archivo de html y ya podemos utilizarla en el css. FORMA NO RECOMENDADA.
+
+    La forma no del todo buena, pero buena por ahora es con JS
+    */
 }
 
 h5, h6 {
@@ -52,23 +87,23 @@ h5, h6 {
 }
 
 a, td, p, button{
-    font-family: "Ubuntu";
+    font-family: "Petemoss";
 }
 
 h1 {
     font-size: 2.5em;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
 }
 
 h2 {
     font-size: 2em;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
 }
 
 h4 {
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
 }
 
@@ -81,11 +116,16 @@ a {
     transition: 300ms;
 }
 
-a:focus, a:hover {
+a:focus, a:hover { /*hover cuando tienes el ratón encima del elemento, focus dando click*/
     outline: none;
     outline-offset: 0;
     text-decoration: none;
-}
+}/*en este caso el enlace esta dentro de una p entonces tendrias que 
+
+p:focus, p:hover
+{
+    color: red; por ejemplo, que se ponga en rojo cuando pasa por encima 
+}*/
 
 /*====================
 ========Image=========
@@ -93,7 +133,9 @@ a:focus, a:hover {
 
 img {
     max-width: 100%;
-}
+}/*
+    ocupan el 100% de la caja que las contengan
+*/
 
 /*====================
 ========Logo=========
@@ -101,7 +143,7 @@ img {
 
 .logo{
     width: max-content;
-}
+}/*aquí está diciendo que la caja que contiene será lo que determine cómo de grande será*/
 
 .logo svg{
     height: 3em;
